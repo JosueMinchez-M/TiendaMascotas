@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url(menu.css);
+@import url(banner.css);
+@import url(blog.css);
+@import url(info.css);
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;/*Esto funciona cuando le demos borde o padding a un elemento ese borde o padding sea adentro del mismo modelo de caja y no se expanda o salga porque es importante que los tamaños se encajen*/
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+header{
+	width: 100%;
+	height: 50px;
+	background: #333;
+	color: #fff;
+
+	/*El código de abajo sirve para que el menú se quede pegado siempre aun cuando bajemos en la página*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100; /*Se coloca para que el header sea siempre el que tape los elementos de la pagina web*/
+}
+
+div.contenedor{
+	width: 98%;
+	margin: auto;/*Se coloca para que todo este centrado*/
+}
+
+h1{
+	float: left;
+}
+
+header.contenedor{
+	display: table; /*Sirve para limpiar los contenedores*/
+}
+
+section{
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+#bienvenidos{
+	text-align: center;
+}
+
+footer div.contenedor{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-bottom: 25px;
+}
+
+p.copy{
+	font-size: 20px;
+}
+
+div.sociales{
+	width: 100%;
+	text-align: center;
+	font-size: 28px;
+}
+
+div.sociales a{
+	color: #333;
+	text-decoration: none;
+}
+
+@media (min-width: 768px){
+	div.sociales{
+		width: auto;
+	}
+
+	footer div.contenedor{
+		justify-content: space-between; /*Permite que los contenedores que tiene ese contenedor se vayan para los extremos del footer*/
+	}
+}
+
+@media (min-width: 1024px){
+	div.contenedor{
+		width: 1000px;
+	}
+}

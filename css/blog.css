@@ -1,0 +1,18 @@
+#blog h3, h4{
+	text-align: center;
+}
+
+#blog div.contenedor{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap; /*Se usa para que los elementos que no caben se bajen uno debajo de otro*/
+}
+
+#blog article{
+	margin: 25px;
+}
+
+#blog img{
+	width: 100%;
+	max-width: 280px;
+}
